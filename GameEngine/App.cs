@@ -24,6 +24,7 @@ public sealed class App : Game
         _graphics = new GraphicsDeviceManager(this);
         
         AddPlugin<SpritePlugin>();
+        AddPlugin<CameraPlugin>();
     }
 
     protected override void Initialize()
@@ -69,7 +70,8 @@ public sealed class App : Game
     {
         _graphics.GraphicsDevice.Clear(WindowRes.Instance.ClearColor);
 
-        SpriteBatchRes.Instance.SpriteBatch?.Begin();
+        SpriteBatchRes.Instance.SpriteBatch?.Begin(transformMatrix: SpriteBatchRes.Instance.TransformMatrix);
+
         foreach (var system in _onDrawSystems)
         {
             system.Run(_world);
@@ -96,7 +98,7 @@ public sealed class App : Game
 
         switch (typeTEvent.Name)
         {
-            case nameof(OnStartUp):
+            case nameof(OnStart):
                 _onStartUpSystems.Add(system);
                 break;
             case nameof(OnUpdate):

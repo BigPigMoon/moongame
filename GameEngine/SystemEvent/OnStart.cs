@@ -2,4 +2,4 @@
 
 namespace GameEngine.SystemEvent;
 
-public class OnStartUp : IEvent { }
+public abstract class OnStart : IEvent { }

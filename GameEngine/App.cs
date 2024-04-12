@@ -34,6 +34,7 @@ public sealed class App : Game
         InitWindowSettings();
 
         SpriteBatchRes.Instance.SpriteBatch = new SpriteBatch(GraphicsDevice);
+        // SpriteBatchRes.Instance.SpriteBatch.GraphicsDevice.SamplerStates[0] = SamplerState.LinearClamp;
         AssetServerRes.Instance.Content = Content;
         ViewportRes.Instance.Viewport = GraphicsDevice.Viewport;
         
@@ -72,7 +73,7 @@ public sealed class App : Game
     {
         _graphics.GraphicsDevice.Clear(WindowRes.Instance.ClearColor);
 
-        SpriteBatchRes.Instance.SpriteBatch?.Begin(transformMatrix: SpriteBatchRes.Instance.TransformMatrix);
+        SpriteBatchRes.Instance.SpriteBatch?.Begin(transformMatrix: SpriteBatchRes.Instance.TransformMatrix, samplerState: SamplerState.PointClamp);
 
         foreach (var system in _onDrawSystems)
         {

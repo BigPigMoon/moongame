@@ -9,9 +9,10 @@ var absolutePath = Path.GetFullPath(Path.Combine(currentDirectory, "Content")); 
 
 var app = new App(absolutePath);
 
-WindowRes.Instance.SetParams("Test game", 1600, 900, true);
-WindowRes.Instance.SetClearColor(Color.Cyan);
-app.AddPlugin<TestDrawingPlugin>();
-app.AddPlugin<CameraPlugin>();
+// WindowRes.Instance.SetParams("Test game", 1600, 900, true);
+// WindowRes.Instance.SetClearColor(Color.Cyan);
+// // app.AddPlugin<TestDrawingPlugin>();
+// app.AddPlugin<CameraPlugin>();
+// app.AddPlugin<TestAnimPlugin>();
 
 app.Run();

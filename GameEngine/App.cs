@@ -23,8 +23,10 @@ public sealed class App : Game
         Content.RootDirectory = contentRootDir;
         _graphics = new GraphicsDeviceManager(this);
         
+        // ======== default plugins ========
         AddPlugin<SpritePlugin>();
         AddPlugin<CameraPlugin>();
+        AddPlugin<TimerPlugin>();
     }
 
     protected override void Initialize()

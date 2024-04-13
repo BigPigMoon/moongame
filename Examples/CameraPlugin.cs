@@ -32,7 +32,7 @@ public class MoveCamera : ISystem
             var dt = TimeRes.Instance.DeltaTime;
 
             var dir = Vector2.Zero;
-            
+
             if (KeyboardRes.Instance.IsKeyPressed(Keys.A))
             {
                 dir.X -= 1;
@@ -41,7 +41,7 @@ public class MoveCamera : ISystem
             {
                 dir.X += 1;
             }
-            
+
             if (KeyboardRes.Instance.IsKeyPressed(Keys.W))
             {
                 dir.Y -= 1;
@@ -59,9 +59,9 @@ public class MoveCamera : ISystem
             {
                 transform.Rotation -= 0.1f;
             }
-            
+
             if (dir != Vector2.Zero)
-                dir.Normalize(); 
+                dir.Normalize();
 
             transform.Translation += dir * dt * Speed;
         });

@@ -10,7 +10,7 @@ namespace GameEngine.Plugins;
 /// <summary>
 /// Плагин камеры
 /// </summary>
-public class CameraPlugin : IPlugin
+public class DefaultCameraPlugin : IPlugin
 {
     public void Create(App app)
     {
@@ -24,15 +24,15 @@ public class CameraPlugin : IPlugin
 public class CameraRender : ISystem
 {
     private readonly QueryDescription _description = new QueryDescription().WithAll<Transform2D, Camera, Camera2D>();
-    
+
     public void Run(World world)
     {
         world.Query(in _description, (ref Transform2D transform, ref Camera camera, ref Camera2D camera2D) =>
         {
             if (!camera.IsActive) return;
-            
+
             var spriteBatchViewport = SpriteBatchRes.Instance.SpriteBatch.GraphicsDevice.Viewport;
-            
+
             SpriteBatchRes.Instance.TransformMatrix = Matrix.CreateTranslation(new Vector3(-transform.Translation.X, -transform.Translation.Y, 0)) *
                               Matrix.CreateRotationZ(-transform.Rotation) *
                               Matrix.CreateScale(camera2D.Scale) *

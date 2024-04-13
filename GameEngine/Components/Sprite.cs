@@ -26,10 +26,6 @@ public class Sprite
     /// Точка относительно которой будут происходить преобразования (перемещение, вращение)
     /// </summary>
     public Anchor Anchor = Anchor.Center;
-    
-    public Vector2 Origin { get; private set; }
 
-    public Sprite()
-    {
-    }
+    public Vector2 Origin { get; private set; }
 }

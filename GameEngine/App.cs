@@ -15,16 +15,13 @@ public sealed class App : Game
     private readonly List<ISystem> _onDrawSystems = [];
 
     private readonly World _world = World.Create();
-    
+
     private readonly GraphicsDeviceManager _graphics;
 
     public App(string contentRootDir)
     {
         Content.RootDirectory = contentRootDir;
         _graphics = new GraphicsDeviceManager(this);
-        
-        AddPlugin<SpritePlugin>();
-        AddPlugin<CameraPlugin>();
     }
 
     protected override void Initialize()
@@ -34,19 +31,19 @@ public sealed class App : Game
         SpriteBatchRes.Instance.SpriteBatch = new SpriteBatch(GraphicsDevice);
         AssetServerRes.Instance.Content = Content;
         ViewportRes.Instance.Viewport = GraphicsDevice.Viewport;
-        
+
         foreach (var system in _onStartUpSystems)
         {
             system.Run(_world);
         }
-        
+
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
         base.LoadContent();
-        
+
         foreach (var system in _onLoadSystems)
         {
             system.Run(_world);
@@ -62,7 +59,7 @@ public sealed class App : Game
 
         TimeRes.Instance.DeltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
         KeyboardRes.Instance.Update();
-        
+
         base.Update(gameTime);
     }
 
@@ -77,20 +74,20 @@ public sealed class App : Game
             system.Run(_world);
         }
         SpriteBatchRes.Instance.SpriteBatch.End();
-        
+
         base.Draw(gameTime);
     }
 
-    public App AddPlugin<T>() where T: IPlugin, new()
+    public App AddPlugin<T>() where T : IPlugin, new()
     {
         var plugin = new T();
-        
+
         plugin.Create(this);
-        
+
         return this;
     }
 
-    public App AddSystem<TEvent, T>() where TEvent: IEvent  where T : ISystem, new()
+    public App AddSystem<TEvent, T>() where TEvent : IEvent where T : ISystem, new()
     {
         var system = new T();
 
@@ -120,10 +117,10 @@ public sealed class App : Game
     private void InitWindowSettings()
     {
         Window.Title = WindowRes.Instance.Title;
-        
+
         _graphics.PreferredBackBufferWidth = WindowRes.Instance.Width;
         _graphics.PreferredBackBufferHeight = WindowRes.Instance.Height;
-        
+
         _graphics.ApplyChanges();
     }
 }

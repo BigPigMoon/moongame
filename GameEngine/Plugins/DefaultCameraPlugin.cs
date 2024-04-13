@@ -10,7 +10,7 @@ namespace GameEngine.Plugins;
 /// <summary>
 /// Плагин камеры
 /// </summary>
-public class CameraPlugin : IPlugin
+public class DefaultCameraPlugin : IPlugin
 {
     public void Create(App app)
     {

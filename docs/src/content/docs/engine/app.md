@@ -6,5 +6,5 @@ title: Приложение
 
 Он содержит следующие методы.
 
-- `AddPlugin` - подробнее в [плагины](/docs/engine/plugins)
-- `AddSystem` - подробнее в [системы](/docs/engine/systems)
+- `AddPlugin` - подробнее в [плагины](/moongame/docs/engine/plugins)
+- `AddSystem` - подробнее в [системы](/moongame/docs/engine/systems)

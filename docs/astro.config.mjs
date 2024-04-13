@@ -4,7 +4,7 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   site: "https://bigpigmoon.github.io",
-  base: "/moongame/docs",
+  base: "/moongame",
   integrations: [
     starlight({
       title: "MoonGame Docs",

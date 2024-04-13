@@ -6,6 +6,6 @@ title: Бандл камеры
 
 Содержит компоненты:
 
-- [Camera](/moongame/docs/components/camera)
-- [Camera2D](/moongame/docs/components/camera2d)
-- [Transform2D](/moongame/docs/components/transform2d)
+- [Camera](/moongame/components/camera)
+- [Camera2D](/moongame/components/camera2d)
+- [Transform2D](/moongame/components/transform2d)

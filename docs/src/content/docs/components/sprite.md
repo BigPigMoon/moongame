@@ -8,5 +8,5 @@ title: Sprite
 - FlipX - Отзеркаливание по горизонтале (`bool`)
 - FlipY - Отзеркаливание по вертикале (`bool`)
 - Rect - Участок спрайта внутри изоображения (`Rectangle`)
-- Anchor - Позиция в которой будет находиться Origin (Смотри [Anchor](/moongame/docs/components/anchor))
+- Anchor - Позиция в которой будет находиться Origin (Смотри [Anchor](/moongame/components/anchor))
 - Origin - Точка относительно которой будут происходить преобразования (перемещение, вращение) (`Vector2`)

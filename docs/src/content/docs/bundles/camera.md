@@ -6,6 +6,6 @@ title: Бандл камеры
 
 Содержит компоненты:
 
-- [Camera](/components/camera)
-- [Camera2D](/components/camera2d)
-- [Transform2D](/components/transform2d)
+- [Camera](/docs/components/camera)
+- [Camera2D](/docs/components/camera2d)
+- [Transform2D](/docs/components/transform2d)

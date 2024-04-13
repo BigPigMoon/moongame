@@ -6,7 +6,7 @@ title: Бандл спрайта
 
 Содержит компоненты:
 
-- [Sprite](/components/sprite)
-- [Transform2D](/components/transform2d)
+- [Sprite](/docs/components/sprite)
+- [Transform2D](/docs/components/transform2d)
 - [Texture2D](https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.Texture2D.html)
-- [Visibility](/components/visibility)
+- [Visibility](/docs/components/visibility)

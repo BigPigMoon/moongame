@@ -6,5 +6,5 @@ title: Приложение
 
 Он содержит следующие методы.
 
-- `AddPlugin` - подробнее в [плагины](/engine/plugins)
-- `AddSystem` - подробнее в [системы](/engine/systems)
+- `AddPlugin` - подробнее в [плагины](/docs/engine/plugins)
+- `AddSystem` - подробнее в [системы](/docs/engine/systems)

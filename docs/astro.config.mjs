@@ -42,6 +42,10 @@ export default defineConfig({
           label: "Бандлы",
           autogenerate: { directory: "bundles" },
         },
+        {
+          label: "Плагины",
+          autogenerate: { directory: "plugins" },
+        },
       ],
     }),
   ],

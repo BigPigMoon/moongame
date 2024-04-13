@@ -8,5 +8,5 @@ title: Бандл спрайта
 
 - [Sprite](/components/sprite)
 - [Transform2D](/components/transform2d)
-- [Texture2D](https:/.monogame.net/api/Microsoft.Xna.Framework.Graphics.Texture2D.html)
+- [Texture2D](https://docs.monogame.net/api/Microsoft.Xna.Framework.Graphics.Texture2D.html)
 - [Visibility](/components/visibility)

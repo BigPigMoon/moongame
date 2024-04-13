@@ -25,3 +25,20 @@ public class SomePlugin : IPlugin
 // Program.cs
 app.AddPlugin<SomePlugin>();
 ```
+
+## Стандартные плагины
+
+Стандартные плагины находятся в классе DefaultPlugins, который содержит следующие плагины
+
+- [SpritePlugin](/plugins/sprite)
+- [DefaultCameraPlugin](/plugins/camera)
+
+:::tip[Почему ничего не работает]
+Чтобы ваша игра начала отображать спрайты, играть музыку, воспроизводить анимации и т.д., вам необходимо подключить `DefaultPlugins` в главном файле вашей игры
+
+```cs
+// Program.cs
+app.AddPlugin<DefaultPlugins>();
+```
+
+:::

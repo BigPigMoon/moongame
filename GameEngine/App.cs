@@ -70,13 +70,13 @@ public sealed class App : Game
     {
         _graphics.GraphicsDevice.Clear(WindowRes.Instance.ClearColor);
 
-        SpriteBatchRes.Instance.SpriteBatch?.Begin(transformMatrix: SpriteBatchRes.Instance.TransformMatrix);
+        SpriteBatchRes.Instance.SpriteBatch.Begin(transformMatrix: SpriteBatchRes.Instance.TransformMatrix);
 
         foreach (var system in _onDrawSystems)
         {
             system.Run(_world);
         }
-        SpriteBatchRes.Instance.SpriteBatch?.End();
+        SpriteBatchRes.Instance.SpriteBatch.End();
         
         base.Draw(gameTime);
     }

@@ -1,8 +1,8 @@
 # Moongame
 
-Это первый игровой движок основанный в России на основе Monogame и Arch и был вдохновлен движком bevy.
+Это первый игровой движок основанный в России, который был вдохновлен движком [bevy](https://bevyengine.org).
 
- //todo добавить ссылки на всякую внешнюю фигню
+Движок использует [Monogame](https://github.com/monogame/monogame) и [Arch](https://github.com/genaray/Arch).
 
 ## Структура
 
@@ -11,4 +11,4 @@
 
 # Документация
 
-Документация находится [тут](https://bigpigmoon.github.io/moongame)
+Документация находится [тут](https://themoongame.ru)

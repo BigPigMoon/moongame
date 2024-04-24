@@ -1,0 +1,42 @@
+﻿frame:
+  width: 48
+  height: 48
+  duration: 0.1
+
+states:
+  - name: standing
+    transitions:
+      - event: move_button_pressed
+        target: walking
+      - event: jump_button_pressed
+        target: jumping
+    frames: 5
+    row: 1
+    repeat: true
+  - name: walking
+    transitions:
+      - event: jump_button_pressed
+        target: jumping
+      - event: not_on_ground
+        target: falling
+    frames: 6
+    row: 2
+    repeat: true
+  - name: jumping
+    transitions:
+      - event: not_on_ground
+        target: falling
+      - event: landing
+        target: standing
+    frames: 3
+    row: 3
+    repeat: true
+  - name: falling
+    transitions:
+      - event: on_ground
+        target: standing
+    frames: 1
+    row: 4
+    repeat: true
+
+init_state: standing

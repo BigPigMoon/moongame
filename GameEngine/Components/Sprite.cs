@@ -20,7 +20,7 @@ public class Sprite
     /// <summary>
     /// Участок спрайта внутри изоображения
     /// </summary>
-    public Rectangle? Rect = null;
+    public Rectangle Rect = Rectangle.Empty;
 
     /// <summary>
     /// Точка относительно которой будут происходить преобразования (перемещение, вращение)

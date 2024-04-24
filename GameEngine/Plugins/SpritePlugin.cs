@@ -50,7 +50,7 @@ public class DrawSprite : ISystem
         spriteBatch.Draw(
             texture: texture,
             position: transform.Translation,
-            sourceRectangle: sprite.Rect,
+            sourceRectangle: sprite.Rect == Rectangle.Empty ? null: sprite.Rect,
             color: sprite.Color,
             rotation: transform.Rotation,
             origin: origin,

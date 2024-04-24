@@ -67,7 +67,7 @@ public sealed class App : Game
     {
         _graphics.GraphicsDevice.Clear(WindowRes.Instance.ClearColor);
 
-        SpriteBatchRes.Instance.SpriteBatch.Begin(transformMatrix: SpriteBatchRes.Instance.TransformMatrix);
+        SpriteBatchRes.Instance.SpriteBatch.Begin(transformMatrix: SpriteBatchRes.Instance.TransformMatrix, samplerState: SpriteBatchRes.Instance.SamplerState);
 
         foreach (var system in _onDrawSystems)
         {

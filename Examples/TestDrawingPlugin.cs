@@ -36,7 +36,7 @@ public class SpawnBall : ISystem
     public void Run(World world)
     {
         var ballTexture = AssetServerRes.Instance.Content.Load<Texture2D>("ball");
-        const float scaleFactor = 0.07f;
+        const float scaleFactor = 0.01f;
         
         SpriteBundle.Create(
             world,

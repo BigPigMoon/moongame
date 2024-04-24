@@ -6,5 +6,6 @@ public class DefaultPlugins : IPlugin
     {
         app.AddPlugin<SpritePlugin>();
         app.AddPlugin<DefaultCameraPlugin>();
+        app.AddPlugin<TimerPlugin>();
     }
 }
